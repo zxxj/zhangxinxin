@@ -76,14 +76,6 @@ html.dark body {
     @apply size-5 p-0.5 rounded hover:bg-black/10 dark:hover:bg-white/10 transition-colors;
   }
 
-  #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:hidden;
-
-    .hint {
-      @apply mt-10 text-sm text-gray-300/80 font-roboto;
-    }
-  }
-
   #dock {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
 
@@ -92,7 +84,7 @@ html.dark body {
     }
 
     .tooltip {
-      @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+      @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-xl !bg-white !text-black !shadow-2xl;
     }
 
     .dock-icon {
