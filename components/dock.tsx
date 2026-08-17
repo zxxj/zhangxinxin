@@ -6,16 +6,28 @@ import { DOCKS } from "@/constants/dock";
 import Image from "next/image";
 import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
+import useWindowStore from "@/store/window";
+import { WindowType } from "@/constants/windows";
 
 type ToggleParams = {
-  id: string;
+  id: WindowType;
   canOpen: boolean;
 };
 
 const Dock = () => {
   const dockRef = useRef<HTMLDivElement>(null);
+  const { open, close, focus, windows } = useWindowStore();
+
   const toggle = (app: ToggleParams) => {
-    console.log(app);
+    if (!app.canOpen) return;
+
+    const window = windows[app.id];
+    if (window.isOpen) {
+      close(app.id);
+    } else {
+      open(app.id);
+    }
+    console.log(windows);
   };
 
   useGSAP(() => {

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/nav";
-import Dock from "@/components/dock";
 
 export const metadata: Metadata = {
   title: "zhangxinxin",
@@ -11,11 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body>
-        <Nav />
-        {children}
-        <Dock />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
