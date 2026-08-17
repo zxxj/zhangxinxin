@@ -1,5 +1,7 @@
+import { WindowType } from "./windows";
+
 type DockItem = {
-  id: string;
+  id: WindowType;
   name: string;
   icon: string;
   canOpen: boolean;
