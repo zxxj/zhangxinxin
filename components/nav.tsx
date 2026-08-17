@@ -6,7 +6,13 @@ const Nav = () => {
   return (
     <nav>
       <div>
-        <Image src="/images/logo.svg" alt="logo" width={14} height={17} />
+        <Image
+          className="w-3.75 h-3.75"
+          src="/images/logo.svg"
+          alt="logo"
+          width={14}
+          height={14}
+        />
         <p>zhangxinxin</p>
 
         <ul>
@@ -19,13 +25,16 @@ const Nav = () => {
       <div>
         <ul>
           {NavIcons.map(({ id, url }) => (
-            <Image
-              key={id}
-              src={url}
-              alt={`icon-${id}`}
-              width={14}
-              height={15}
-            />
+            <li key={id}>
+              <Image
+                className="w-3.75 h-3.75"
+                key={id}
+                src={url}
+                alt={`icon-${id}`}
+                width={14}
+                height={14}
+              />
+            </li>
           ))}
         </ul>
 
