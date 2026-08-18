@@ -7,7 +7,10 @@ export type WindowType =
   | "terminal"
   | "txtfile"
   | "imgfile"
-  | "trash";
+  | "trash"
+  | "project"
+  | "contact"
+  | "resume";
 
 type WindowConfigItem = {
   isOpen: boolean;
@@ -29,4 +32,5 @@ export const WINDOW_CONFIG: WindowConfig = {
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  project: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
