@@ -1,7 +1,9 @@
+import { WindowType } from "./windows";
+
 type NavItem = {
   id: number;
   name: string;
-  type: string;
+  type: WindowType;
 };
 
 type NavIconItem = {

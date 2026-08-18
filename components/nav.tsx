@@ -1,8 +1,13 @@
+"use client";
+
 import { NavData, NavIcons } from "@/constants/nav";
+import useWindowStore from "@/store/window";
 import dayjs from "dayjs";
 import Image from "next/image";
 
 const Nav = () => {
+  const { open } = useWindowStore();
+
   return (
     <nav>
       <div>
@@ -16,8 +21,10 @@ const Nav = () => {
         <p>zhangxinxin</p>
 
         <ul>
-          {NavData.map(({ id, name }) => (
-            <li key={id}>{name}</li>
+          {NavData.map(({ id, name, type }) => (
+            <li key={id} onClick={() => open(type)}>
+              {name}
+            </li>
           ))}
         </ul>
       </div>
