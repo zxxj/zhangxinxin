@@ -1,9 +1,11 @@
-import Terminal from "@/components/terminal";
+import SafariWindow from "@/components/safari";
+import TerminalWindow from "@/components/terminal";
 
 export default function Home() {
   return (
     <main>
-      <Terminal />
+      <TerminalWindow />
+      <SafariWindow />
     </main>
   );
 }

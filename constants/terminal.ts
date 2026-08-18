@@ -1,4 +1,9 @@
-export const techStack = [
+type TechStackItem = {
+  category: string;
+  items: string[];
+};
+
+export const techStack: TechStackItem[] = [
   {
     category: "Frontend",
     items: ["Next.js", "React.js", "Vue.js", "Typescript"],
